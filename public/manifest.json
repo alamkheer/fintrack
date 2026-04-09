@@ -1,0 +1,27 @@
+{
+  "name": "FinTrack Personal Finance",
+  "short_name": "FinTrack",
+  "description": "A high-end, responsive personal finance and budget manager.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF9F8",
+  "theme_color": "#8655f6",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

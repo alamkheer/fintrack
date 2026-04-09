@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@variant dark (.dark &);
+
+@theme {
+  /* ── Brand ── */
+  --color-brand:           #8655f6; /* Primary Violet — buttons, CTAs, interactive */
+  --color-brand-secondary: #806bb4; /* Secondary — chips, secondary actions */
+  --color-brand-tertiary:  #af6400; /* Tertiary Amber — badges, highlights */
+  --color-neutral:         #7a7581; /* Neutral base — non-chromatic surfaces */
+
+  /* ── Surface Hierarchy (Light) ── */
+  --color-background:               #FAF9F8; /* Warm neutral base */
+  --color-surface:                  #FAF9F8;
+  --color-surface-bright:           #FFFFFF;
+  --color-surface-container:        #FAF9F8;
+  --color-surface-container-high:   #E7E0ED;
+  --color-surface-container-highest:#D6D3D1;
+  --color-surface-container-low:    #F5F5F4;
+  --color-surface-container-lowest: #FFFFFF;
+
+  /* ── On-Surface (Text / Icon) ── */
+  --color-on-surface:         #292524; /* Primary text — never pure #000 */
+  --color-on-surface-variant: #494455; /* Secondary / caption text */
+
+  /* ── Structural ── */
+  --color-outline: #D6D3D1; /* Ghost borders only — see "No-Line" rule */
+
+  /* ── Semantic ── */
+  --color-error:   #F43F5E;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-info:    #0284c7;
+
+  /* ── Signature Textures (Pastel Voids) ── */
+  --color-void-blue:  #BAE6FD; /* Soft focal accent — use at 10–20% opacity */
+  --color-void-amber: #FDE68A; /* Warm focal accent — use at 10–20% opacity */
+
+  /* ── Dark Mode Overrides ── */
+  --color-background-dark:               #0f0e11;
+  --color-surface-dark:                  #0f0e11;
+  --color-surface-bright-dark:           #1c1b21;
+  --color-surface-container-dark:        #151419;
+  --color-surface-container-high-dark:   #26242e;
+  --color-surface-container-highest-dark:#312f3b;
+  --color-surface-container-low-dark:    #13121a;
+  --color-surface-container-lowest-dark: #0a090e;
+  --color-on-surface-dark:               #e8e1f4;
+  --color-on-surface-variant-dark:       #a99cbd;
+  --color-outline-dark:                  #3d3a47;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-on-surface);
+    background-color: var(--color-background);
+  }
+
+  .dark {
+    --color-background: var(--color-background-dark);
+    --color-surface: var(--color-surface-dark);
+    --color-surface-bright: var(--color-surface-bright-dark);
+    --color-surface-container: var(--color-surface-container-dark);
+    --color-surface-container-high: var(--color-surface-container-high-dark);
+    --color-surface-container-highest: var(--color-surface-container-highest-dark);
+    --color-surface-container-low: var(--color-surface-container-low-dark);
+    --color-surface-container-lowest: var(--color-surface-container-lowest-dark);
+    --color-on-surface: var(--color-on-surface-dark);
+    --color-on-surface-variant: var(--color-on-surface-variant-dark);
+    --color-outline: var(--color-outline-dark);
+  }
+}
