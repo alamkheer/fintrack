@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { runInitialSeed } from './services/db/seed';
 import { SettingsProvider } from './contexts/SettingsContext';
 import { WalletProvider } from './contexts/WalletContext';
@@ -30,7 +30,7 @@ export default function App() {
         <CategoryProvider>
           <ExpenseProvider>
             <BudgetProvider>
-              <BrowserRouter>
+              <HashRouter>
                 <ToastProvider>
                   <EntryProvider>
                     <Layout>
@@ -48,7 +48,7 @@ export default function App() {
                     </Layout>
                   </EntryProvider>
                 </ToastProvider>
-              </BrowserRouter>
+              </HashRouter>
             </BudgetProvider>
           </ExpenseProvider>
         </CategoryProvider>
