@@ -5,7 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === 'serve' ? '/' : '/projects/fintrack/v1/',
   plugins: [
     tailwindcss(),
     react(),
@@ -17,6 +18,7 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,json}'],
         cleanupOutdatedCaches: true,
+        navigateFallback: 'index.html',
       }
     })
   ],
@@ -38,4 +40,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))
